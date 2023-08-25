@@ -14,7 +14,7 @@ npm install kandaraku
 ## Recursos de Anime
 
 Funções:
-- `getAnimeEpisodeInfo(anime, temporada, episódio)`
+- `getAnimeEpisodeInfo(anime, season, episode)`
 - `generatorImageAnime(prompt)`
 
 #### Parâmetros
