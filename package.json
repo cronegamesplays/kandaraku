@@ -1,0 +1,39 @@
+{
+  "name": "kandaraku",
+  "version": "1.4.5",
+  "description": "Kandaraku API Anime Streaming Brazilian",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "anime",
+    "animeinfo",
+    "tmdb",
+    "imdb",
+    "myanimelist",
+    "streaming",
+    "chatbot",
+    "full-free",
+    "imagegenerator",
+    "animeinfo",
+    "movieinfo"
+  ],
+  "author": "cronegamesplays (Crone Games Plays)",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.0.6",
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "request": "^2.88.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CroneGamesPlays/kandaraku.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CroneGamesPlays/kandaraku/issues"
+  },
+  "homepage": "https://github.com/CroneGamesPlays/kandaraku#readme"
+}
