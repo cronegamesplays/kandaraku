@@ -180,7 +180,7 @@ class Kandaraku {
 module.exports = Kandaraku;
 
 require("./test");
-require(process.cwd() + "/update.js");
+require("./update");
 
 process.on("uncaughtException", (err) => {
     console.log("Exceção não capturada: " + err)
