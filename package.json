@@ -1,6 +1,6 @@
 {
   "name": "kandaraku",
-  "version": "1.5.5",
+  "version": "1.6.0",
   "description": "Kandaraku API Anime Information Streaming Chatbot Brazilian",
   "main": "index.js",
   "scripts": {

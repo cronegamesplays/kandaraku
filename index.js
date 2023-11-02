@@ -73,60 +73,110 @@ class Kandaraku {
   };
 
   // Função para obter as informações de um anime na database Kandaraku
-  async getAnimeSerieInfo({ mal_url }) {
-    try{
-      const encodedUrl = encodeURI(mal_url);
-      const animeapi = await axios.get(`https://kandaraku-hosted-database-api.cronegames.repl.co/anime/serie/get?link=${encodedUrl}`, {
+  async getAnimeSerieInfo({ mal_name, mal_url }) {
+    try {
+      if (!mal_name && !mal_url) {
+        throw new Error("Você deve fornecer pelo menos um dos parâmetros 'mal_name' ou 'mal_url'.");
+      }
+
+      let apiUrl;
+
+      if (mal_name) {
+        apiUrl = `https://kandaraku-hosted-database-api.cronegames.repl.co/anime/serie/get?name=${encodeURIComponent(mal_name)}`;
+      } else {
+        apiUrl = `https://kandaraku-hosted-database-api.cronegames.repl.co/anime/serie/get?link=${encodeURIComponent(mal_url)}`;
+      }
+
+      const animeapi = await axios.get(apiUrl, {
         headers: {
-            "content-type": "application/json",
+          "content-type": "application/json",
         },
-      })
+      });
+
       return animeapi.data;
-    } catch(error){
-    throw new Error("Erro: "+ error.message)   
+    } catch (error) {
+      throw new Error("Erro: " + error.message);
     }
   };
 
-// Função para obter as informações de uma temporada de anime na database Kandaraku
-  async getAnimeSeasonInfo({ mal_id, season_number }) {
-    try{
-      const animeapi = await axios.get(`https://kandaraku-hosted-database-api.cronegames.repl.co/anime/season/get?id=${mal_id}&season=${season_number}`, {
+  // Função para obter as informações de uma temporada de anime na database Kandaraku
+  async getAnimeSeasonInfo({ mal_name, mal_id, season_number }) {
+    try {
+      if (!mal_name && !mal_id) {
+        throw new Error("Você deve fornecer pelo menos um dos parâmetros 'mal_name' ou 'mal_id'.");
+      }
+
+      let apiUrl;
+
+      if (mal_name) {
+        apiUrl = `https://kandaraku-hosted-database-api.cronegames.repl.co/anime/season/get?name=${encodeURIComponent(mal_name)}&season=${season_number}`;
+      } else if (mal_id) {
+        apiUrl = `https://kandaraku-hosted-database-api.cronegames.repl.co/anime/season/get?id=${mal_id}&season=${season_number}`;
+      }
+
+      const animeapi = await axios.get(apiUrl, {
         headers: {
-            "content-type": "application/json",
+          "content-type": "application/json",
         },
-      })
+      });
+
       return animeapi.data;
-    } catch(error){
-    throw new Error("Erro: "+ error.message)   
+    } catch (error) {
+      throw new Error("Erro: " + error.message);
     }
   };
 
   // Função para obter as informações de um episódio de anime na database Kandaraku
-  async getAnimeEpisodeInfo({ mal_id, season_number, episode_number }) {
-    try{
-      const animeapi = await axios.get(`https://kandaraku-hosted-database-api.cronegames.repl.co/anime/episode/get?id=${mal_id}&season=${season_number}&episode=${episode_number}`, {
+  async getAnimeEpisodeInfo({ mal_name, mal_id, season_number, episode_number }) {
+    try {
+      if (!mal_name && !mal_id) {
+        throw new Error("Você deve fornecer pelo menos um dos parâmetros 'mal_name' ou 'mal_id'.");
+      }
+
+      let apiUrl;
+
+      if (mal_name) {
+        apiUrl = `https://kandaraku-hosted-database-api.cronegames.repl.co/anime/episode/get?name=${encodeURIComponent(mal_name)}&season=${season_number}&episode=${episode_number}`;
+      } else if (mal_id) {
+        apiUrl = `https://kandaraku-hosted-database-api.cronegames.repl.co/anime/episode/get?id=${mal_id}&season=${season_number}&episode=${episode_number}`;
+      }
+
+      const animeapi = await axios.get(apiUrl, {
         headers: {
-            "content-type": "application/json",
+          "content-type": "application/json",
         },
-      })
+      });
+
       return animeapi.data;
-    } catch(error){
-    throw new Error("Erro: "+ error.message)   
+    } catch (error) {
+      throw new Error("Erro: " + error.message);
     }
   };
 
   // Função para obter as informações de um filme de anime na database Kandaraku
-  async getAnimeMovieInfo({ mal_url }) {
-    try{
-      const encodedUrl = encodeURI(mal_url);
-      const animeapi = await axios.get(`https://kandaraku-hosted-database-api.cronegames.repl.co/anime/movie/get?link=${encodedUrl}`, {
+  async getAnimeMovieInfo({ mal_name, mal_url }) {
+    try {
+      if (!mal_name && !mal_url) {
+        throw new Error("Você deve fornecer pelo menos um dos parâmetros 'mal_name' ou 'mal_url'.");
+      }
+
+      let apiUrl;
+
+      if (mal_name) {
+        apiUrl = `https://kandaraku-hosted-database-api.cronegames.repl.co/anime/movie/get?name=${encodeURIComponent(mal_name)}`;
+      } else {
+        apiUrl = `https://kandaraku-hosted-database-api.cronegames.repl.co/anime/movie/get?link=${encodeURIComponent(mal_url)}`;
+      }
+
+      const animeapi = await axios.get(apiUrl, {
         headers: {
-            "content-type": "application/json",
+          "content-type": "application/json",
         },
-      })
+      });
+
       return animeapi.data;
-    } catch(error){
-    throw new Error("Erro: "+ error.message)   
+    } catch (error) {
+      throw new Error("Erro: " + error.message);
     }
   };
 

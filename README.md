@@ -28,7 +28,7 @@ Para **npm** no seu terminal ou shell:
 npm install kandaraku
 ```
 
-Importando o **Kandraku**:
+Importando o **Kandaraku**:
 ```js
 const Kandaraku = require("kandaraku");
 const kand = new Kandaraku();
