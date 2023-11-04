@@ -1,6 +1,6 @@
 {
   "name": "kandaraku",
-  "version": "1.6.0",
+  "version": "1.6.5",
   "description": "Kandaraku API Anime Information Streaming Chatbot Brazilian",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,9 @@
     "mal-scraper",
     "animedb",
     "myanimelist",
+    "themoviedb",
+    "themoviedatabase",
+    "tmdb",
     "streaming",
     "chatbot",
     "full-free",
