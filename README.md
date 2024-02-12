@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/921914162475593809/1169047034389594223/kandaraku-icon.png" width="600px" alt="stats" align="center">
+  <img src="https://cdn.discordapp.com/attachments/921914162475593809/1192151100338483282/images.jpg" width="600px" height="500px" alt="stats" align="center">
 </p>
 <p align="center">
   <a href="https://nodei.co/npm/kandaraku/"><img src="https://nodei.co/npm/kandaraku.png"></a>
@@ -40,4 +40,4 @@ Com isso você já instalou com sucesso a nossa API. Muito obrigado por utilizar
 
 Discord do desenvolvedor: cronegamesplays
 
-Desenvolvido e criado por CroneGamesPlays Developer - NeoKurai Studios © 2020 - 2023
+Desenvolvido e criado por CroneGamesPlays Developer - Kandaraku Studios © 2020 - 2024
